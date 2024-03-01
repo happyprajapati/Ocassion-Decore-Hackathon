@@ -64,8 +64,8 @@ const EventSwiper = () => {
         className="mySwiper"
       >
         {events.map((event,key) => (
-          <SwiperSlide key={key} className="flex flex-col justify-start gap-2 p-3 rounded-tr-4xl rounded-bl-4xl bg-cd-bg overflow-hidden">
-            <img src={event.src} />
+          <SwiperSlide key={key} className="flex flex-col justify-start gap-2 p-3 rounded-tr-3xl rounded-bl-3xl bg-cd-bg bg-[#EF9AEF]">
+            <img src={event.src} className="rounded-tr-3xl"/>
             <span className="text-xl w-full font-semibold pb-1">{event.title}</span>
             <p>{event.add}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mb-3">
