@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from './components/header'
+import Home from './pages/home'
 import './App.css'
+// import Application from './../pages/student/application'
+// import Auth from './../pages/student/auth'
+// import ResetPass from './../pages/student/resetPass'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function user() {
+    return (
+        // <div className="bg-[url('/background1.jpg')] bg-cover bg-center h-full">
+        // <div className="w-full h-full bg-black/60">
+        <>
+        <Header />
+        <BrowserRouter>
+        <Routes>
+            <Route index element={<Home />} />
+            {/* <Route path="application" element={<Application />} />
+            <Route path="login" element={<Auth />} />
+            <Route path="login/reset-password/:token" element={<ResetPass />} /> */}
+            {/* <Route path="rooms" element={<Rooms />} /> */}
+            {/* <Route path="*" element={<NoPage />} /> */}
+        </Routes>
+      </BrowserRouter>
+        {/* </div>
+      </div> */}
+      </>
+    )
 }
 
-export default App
+export default user
