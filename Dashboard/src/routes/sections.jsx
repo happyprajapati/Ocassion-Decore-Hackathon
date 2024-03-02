@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Outlet, Navigate, useRoutes } from 'react-router-dom';
-import { VerifyInfo } from 'src/components/tables/VerifyInfo';
+import { VerifyInfo } from './../sections/verification/view/verify-info';
 
 import DashboardLayout from 'src/layouts/dashboard';
 

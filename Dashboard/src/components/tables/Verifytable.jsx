@@ -1,61 +1,29 @@
 import { Card, Typography, button } from "@material-tailwind/react";
  
-const TABLE_HEAD = ["Name", "email","Location", "Guest","Price","Docs","Accept","Reject"];
+const TABLE_HEAD = ["Type", "State","City", "Address","Name","Capacity","Decoration","Catering", "Price","Image","Adhaar","Property","Bank","Accept","Reject"];
  
 const TABLE_ROWS = [
   {
+    type: "Hotel",
+    state: "Gujarat",
+    city: "Ahmedabad",
+    address: "Ahmedabad",
     name: "Shyam",
-    email: "shyam@gmail.com",
-    location: "gandhinagar",
-    guest: "2",
+    capacity: "2",
+    decoration: "Yes",
+    catering: "Yes",
     price: "1000",
-    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    image: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    adhaar: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    property: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    bank: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
     accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
     reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
-  {
-    name: "Shyam",
-    email: "shyam@gmail.com",
-    location: "gandhinagar",
-    guest: "2",
-    price: "1000",
-    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
-  },
-  {
-    name: "Shyam",
-    email: "shyam@gmail.com",
-    location: "gandhinagar",
-    guest: "2",
-    price: "1000",
-    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
-  },
-  {
-    name: "Shyam",
-    email: "shyam@gmail.com",
-    location: "gandhinagar",
-    guest: "2",
-    price: "1000",
-    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
-  },
-  {
-    name: "Shyam",
-    email: "shyam@gmail.com",
-    location: "gandhinagar",
-    guest: "2",
-    price: "1000",
-    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
-  },
+
 ];
  
-export function VerifyInfo() {
+export function VerifyTable() {
   return (
     <Card className="h-full w-full overflow-scroll">
       <table className="w-full min-w-max table-auto text-left">
@@ -78,7 +46,7 @@ export function VerifyInfo() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, email, location, guest,price,docs,accept,reject }, index) => {
+          {TABLE_ROWS.map(({ type, state, city, address, name, capacity, decoration, catering, price, image, adhaar, property, bank,accept, reject}, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
@@ -91,7 +59,7 @@ export function VerifyInfo() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {name}
+                    {type}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -100,7 +68,7 @@ export function VerifyInfo() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {email}
+                    {state}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -109,7 +77,7 @@ export function VerifyInfo() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {location}
+                    {city}
                   </Typography>
                 </td>
                 <td>
@@ -118,10 +86,47 @@ export function VerifyInfo() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {guest}
+                    {address}
                   </Typography>
                   </td>
                   <td>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {name}
+                  </Typography>
+                  </td>
+                  <td>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {capacity}
+                  </Typography>
+                </td>
+
+                  <td>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {decoration}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {catering}
+                  </Typography>
+                </td>
+                <td className={classes}>
                   <Typography
                     variant="small"
                     color="blue-gray"
@@ -129,18 +134,44 @@ export function VerifyInfo() {
                   >
                     {price}
                   </Typography>
-                  </td>
-                  <td>
+                </td>
+                <td className={classes}>
                   <Typography
                     variant="small"
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {docs}
+                    {image}
                   </Typography>
                 </td>
-
-                  <td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {adhaar}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {property}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {bank}
+                  </Typography>
+                </td>
+                <td className={classes}>
                   <Typography
                     variant="small"
                     color="blue-gray"
@@ -158,7 +189,6 @@ export function VerifyInfo() {
                     {reject}
                   </Typography>
                 </td>
-                
               </tr>
             );
           })}
