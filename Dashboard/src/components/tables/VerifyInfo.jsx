@@ -1,6 +1,6 @@
 import { Card, Typography, button } from "@material-tailwind/react";
  
-const TABLE_HEAD = ["Name", "email","Location", "Guest","Price"];
+const TABLE_HEAD = ["Name", "email","Location", "Guest","Price","Docs","Accept","Reject"];
  
 const TABLE_ROWS = [
   {
@@ -9,6 +9,9 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
+    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
+    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -16,6 +19,9 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
+    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
+    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -23,6 +29,9 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
+    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
+    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -30,6 +39,9 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
+    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
+    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -37,10 +49,13 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
+    docs: <button><a className="bg-blue-500 py-3 px-4 rounded" href="/assets/pdf/Certification.pdf">View</a></button>,
+    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
+    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
 ];
  
-export default function CardInfo() {
+export function VerifyInfo() {
   return (
     <Card className="h-full w-full overflow-scroll">
       <table className="w-full min-w-max table-auto text-left">
@@ -63,7 +78,7 @@ export default function CardInfo() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, email, location, guest,price}, index) => {
+          {TABLE_ROWS.map(({ name, email, location, guest,price,docs,accept,reject }, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
@@ -115,6 +130,34 @@ export default function CardInfo() {
                     {price}
                   </Typography>
                   </td>
+                  <td>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {docs}
+                  </Typography>
+                </td>
+
+                  <td>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {accept}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {reject}
+                  </Typography>
+                </td>
                 
               </tr>
             );
