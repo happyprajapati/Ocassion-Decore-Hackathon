@@ -11,11 +11,11 @@ import ProductCard from '../product-card';
 import ProductSort from '../product-sort';
 import ProductFilters from '../product-filters';
 import ProductCartWidget from '../product-cart-widget';
-import { CardInfo } from 'src/components/tables/CardInfo';
+import { VerifyInfo } from 'src/components/tables/VerifyInfo';
 
 // ----------------------------------------------------------------------
 
-export default function ProductsView() {
+export default function VerifyInfo() {
   // const [openFilter, setOpenFilter] = useState(false);
 
   // const handleOpenFilter = () => {
@@ -31,7 +31,7 @@ export default function ProductsView() {
       <Typography variant="h4" sx={{ mb: 5 }}>
         Places
       </Typography>
-       <CardInfo/>
+       <VerifyInfo/>
 
       {/* <Stack
         direction="row"

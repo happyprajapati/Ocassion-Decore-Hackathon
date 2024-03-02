@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Outlet, Navigate, useRoutes } from 'react-router-dom';
+import { VerifyInfo } from 'src/components/tables/VerifyInfo';
 
 import DashboardLayout from 'src/layouts/dashboard';
 
@@ -34,8 +35,8 @@ export default function Router() {
       element: <LoginPage />,
     },
     {
-      path: '404',
-      element: <Page404 />,
+      path: 'verification',
+      element: <VerifyInfo />,
     },
     {
       path: '*',
