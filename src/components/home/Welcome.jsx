@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import Addplace from "../../pages/addplace";
 
 const images = [
   {
@@ -29,6 +30,12 @@ function Welcome() {
     if(localStorage.getItem("role"))
       setRole(localStorage.getItem("role"));
   },[])
+
+  const openAddPlace = () => {
+    return(
+      <Addplace />
+    )
+  }
 
   return (
     <>
@@ -60,6 +67,7 @@ function Welcome() {
               <Typography>
                 <button
                   className="w-fit px-5 flex\ justify-center px-3 py-1 bg-[#a855f7] text-white rounded-md hover:shadow-xl"
+                  onClick={openAddPlace}
                 >
                   Select Place
                 </button>
