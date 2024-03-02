@@ -1,6 +1,6 @@
 import { Card, Typography, button } from "@material-tailwind/react";
  
-const TABLE_HEAD = ["Name", "email","Location", "Guest","Price","Accept","Reject"];
+const TABLE_HEAD = ["Name", "email","Location", "Guest","Price"];
  
 const TABLE_ROWS = [
   {
@@ -9,8 +9,6 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -18,8 +16,6 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -27,8 +23,6 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -36,8 +30,6 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
   {
     name: "Shyam",
@@ -45,8 +37,6 @@ const TABLE_ROWS = [
     location: "gandhinagar",
     guest: "2",
     price: "1000",
-    accept: <button className="bg-blue-500 py-3 px-4 rounded">Accept</button>,
-    reject: <button className="bg-blue-500 py-3 px-4 rounded">Reject</button>,
   },
 ];
  
@@ -73,7 +63,7 @@ export function CardInfo() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, email, location, guest,price,accept,reject }, index) => {
+          {TABLE_ROWS.map(({ name, email, location, guest,price}, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
@@ -125,24 +115,6 @@ export function CardInfo() {
                     {price}
                   </Typography>
                   </td>
-                  <td>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {accept}
-                  </Typography>
-                </td>
-                <td className={classes}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {reject}
-                  </Typography>
-                </td>
                 
               </tr>
             );

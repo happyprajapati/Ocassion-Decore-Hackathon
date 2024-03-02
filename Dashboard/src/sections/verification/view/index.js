@@ -1,1 +1,1 @@
-export { default as VerifyInfo } from './VerifyInfo';
+export { default as VerifyInfo } from './verify-info.jsx';
