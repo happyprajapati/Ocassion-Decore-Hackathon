@@ -41,14 +41,16 @@ const EventSwiper = () => {
   const [slide, setSlide] = React.useState(3);
 
   React.useEffect(() => {
-    // window.innerWidth >= 960 ? setSlide(3) : null;
-    // window.addEventListener(
-    //   "resize",
-    //   () =>{
+    window.innerWidth >= 960 ? setSlide(3) : null;
+    window.innerWidth <= 960 && window.innerWidth >= 740 ? setSlide(2): null;
+    window.innerWidth <= 740 ? setSlide(1) : null;
+    window.addEventListener(
+      "resize",
+      () =>{
         window.innerWidth >= 960 ? setSlide(3) : null;
     window.innerWidth <= 960 && window.innerWidth >= 740 ? setSlide(2): null;
     window.innerWidth <= 740 ? setSlide(1) : null;
-      // });
+      });
   },[])
 
   return (

@@ -1,10 +1,10 @@
 const bcrypt = require("bcrypt");
-const User = require("./../models/user");
-const Event = require("./../models/event");
-const Token = require("./../models/token");
+const User = require("../models/user");
+const Event = require("../models/event");
+const Token = require("../models/token");
 const { validationResult } = require("express-validator");
 const crypto = require("crypto");
-const transporter = require("./../middlewares/nodemailer");
+const transporter = require("../middlewares/nodemailer");
 const salt = 10;
 
 const generateToken = (id) => {

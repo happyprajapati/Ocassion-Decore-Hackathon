@@ -117,7 +117,7 @@ export default function Header() {
   return (
     <div className="max-h-[768px] max-w-full">
       <Navbar
-        className={`fixed top-0 z-10 h-max max-w-full px-4 py-2 lg:px-8 lg:py-3 rounded-none transition duration-300 ease-in border-none bg-opacity-100 bg-hd-bg bg-white ${
+        className={`fixed top-0 z-10 h-max max-w-full px-4 py-0 rounded-none transition duration-300 ease-in border-none bg-opacity-100 bg-hd-bg bg-white ${
           scroll ? "scroll" : ""
         }`}
       >
@@ -125,9 +125,9 @@ export default function Header() {
           <Typography
             as="a"
             href="/"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
+            className="mr-4 cursor-pointer font-medium"
           >
-            Ocassion Decore
+            <img src="/logo.svg" width={80} height={80} />
           </Typography>
           <div className="flex items-center gap-4">
             {!isLogin && <div className="mr-4 hidden lg:block">{navList1}</div>}

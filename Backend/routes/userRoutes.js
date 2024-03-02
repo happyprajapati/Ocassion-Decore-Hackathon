@@ -1,5 +1,5 @@
 const routes = require('express').Router();
-const { createUser, verifyEmail, getOtp, sentResetPassToken, CheckResetEmail, resetPass, getEvents } = require('../controllers/studentController.js');
+const { createUser, verifyEmail, sentResetPassToken, CheckResetEmail, resetPass, getEvents } = require('../controllers/userController.js');
 const {loginUser} = require('../controllers/authController.js');
 const { validateRegister, validateLogin } = require('../middlewares/validator.js');
 const { varifyAuthToken } = require('../middlewares/varifyAuthToken.js');
