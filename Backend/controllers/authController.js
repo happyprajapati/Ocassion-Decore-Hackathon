@@ -17,6 +17,7 @@ const loginUser = async (req, res) => {
             data: {
               message: "Logged In Successfully.",
               authToken: user.generateAuthToken(),
+              role: user.role,
             },
           });
         }

@@ -23,7 +23,7 @@ const images = [
 
 function Welcome() {
 
-  const [role, setRole] = React.useState(1);
+  const [role, setRole] = React.useState(0);
   
   React.useEffect(()=>{
     if(localStorage.getItem("role"))

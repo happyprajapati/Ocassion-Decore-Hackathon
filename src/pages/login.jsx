@@ -30,6 +30,7 @@ function login() {
           if (res.success == true) {
             setMsg([res.data.message]);
             localStorage.setItem("token",res.data.authToken);
+            localStorage.setItem("role",res.data.role);
             setMsg([res.data.message]);
             setIsErr(false)
             setTimeout(() => {
