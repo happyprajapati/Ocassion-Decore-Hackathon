@@ -23,7 +23,7 @@ const images = [
 
 function Welcome() {
 
-  const [role, setRole] = React.useState(0);
+  const [role, setRole] = React.useState("");
   
   React.useEffect(()=>{
     if(localStorage.getItem("role"))
@@ -32,7 +32,7 @@ function Welcome() {
 
   return (
     <>
-    {role == 0 && <Carousel autoplay className="rounded-xl">
+    {role == "buyer" && <Carousel autoplay className="rounded-xl">
       {images.map((image, key) => (
         // <>
         <div key={key} className="relative h-full w-full">
@@ -129,7 +129,7 @@ function Welcome() {
         </div>
       ))}
     </Carousel>}
-    {role == 1 && <Carousel autoplay className="rounded-xl">
+    {role == "owner" && <Carousel autoplay className="rounded-xl">
       {images.map((image, key) => (
         // <>
         <div key={key} className="relative h-full w-full">

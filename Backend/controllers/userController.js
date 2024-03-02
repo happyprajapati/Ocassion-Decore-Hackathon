@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
-const Event = require("../models/event");
+// const Event = require("../models/event");
 const Token = require("../models/token");
 const { validationResult } = require("express-validator");
 const crypto = require("crypto");
@@ -113,10 +113,10 @@ const verifyEmail = async (req, res) => {
   }
 };
 
-const getEvents = async (req, res) => {
-  const events = await Event.find();
-  return res.json({ success: true, data: events });
-};
+// const getEvents = async (req, res) => {
+//   const events = await Event.find();
+//   return res.json({ success: true, data: events });
+// };
 
 // const getOtp = async (req, res) => {
 //   try {
@@ -249,9 +249,9 @@ const resetPass = async (req, res) => {
 module.exports = {
   createUser,
   verifyEmail,
-  getOtp,
+  // getOtp,
   sentResetPassToken,
   CheckResetEmail,
   resetPass,
-  getEvents,
+  // getEvents,
 };

@@ -4,9 +4,7 @@ const filepath = require("path");
 
 const filter = (req, file, cb) => {
   if (
-    file.mimetype == "image/png" ||
-    file.mimetype == "image/jpeg" ||
-    file.mimetype == "image/jpg"
+    file.mimetype == "pdf"
   ) {
     cb(null, true);
   } else {
@@ -15,7 +13,7 @@ const filter = (req, file, cb) => {
 };
 
 const limit = (req, file, cb) => {
-  if (file.fileSize == 1024 * 1024) {
+  if (file.fileSize == 2048 * 2048) {
     cb(null, true);
   } else {
     cb(null, false);
@@ -42,7 +40,7 @@ const checkDir = (name) => {
 const proofstorage = multer.diskStorage({
   destination: (req, file, cb) => {
     checkDir("proof")
-    cb(null, "../public/images/proof");
+    cb(null, "../public/pdf/proof");
   },
   filename: (req, file, cb) => {
     cb(

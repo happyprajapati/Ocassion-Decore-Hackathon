@@ -32,7 +32,7 @@ export default function Header() {
   };
 
   React.useEffect(() => {
-    if (localStorage.getItem("token")) setIsLogin(true);
+    if (localStorage.getItem("role")) setIsLogin(true);
     else setIsLogin(false);
 
     window.addEventListener(

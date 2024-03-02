@@ -2,7 +2,7 @@ const routes = require('express').Router();
 const { createUser, verifyEmail, sentResetPassToken, CheckResetEmail, resetPass, getEvents } = require('../controllers/userController.js');
 const {loginUser} = require('../controllers/authController.js');
 const { validateRegister, validateLogin } = require('../middlewares/validator.js');
-const { varifyAuthToken } = require('../middlewares/varifyAuthToken.js');
+// const { varifyAuthToken } = require('../middlewares/varifyAuthToken.js');
 
 
 // Register API
@@ -18,7 +18,7 @@ routes.post('/login', validateLogin, loginUser);
 // routes.post("/get-otp", getOtp);
 
 // Get Events API
-routes.get("/events", varifyAuthToken, getEvents);
+// routes.get("/events", varifyAuthToken, getEvents);
 
 routes.post("/send-token", sentResetPassToken);
 

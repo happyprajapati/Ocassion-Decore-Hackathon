@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("./../models/user");
-const Event = require("./../models/event");
+// const Event = require("./../models/event");
+const Place = require("./../models/place");
 const SliderImg = require("./../models/sliderimg");
 const nodemailer = require("nodemailer");
 
@@ -93,35 +94,35 @@ const createManager = async (req, res) => {
   }
 };
 
-const createEvent = async (req, res) => {
-  try {
-    const { title, description } = req.body;
-    const event = new Event({
-      title,
-      description,
-    });
-    await event
-      .save()
-      .then(() => {
-        return res
-          .status(200)
-          .json({
-            success: true,
-            data: { message: "Event Created Successfully." },
-          });
-      })
-      .catch((e) => {
-        return res
-          .status(200)
-          .json({
-            success: false,
-            data: { message: "Event Not Created.", error: e },
-          });
-      });
-  } catch (e) {
-    return res.json({ success: false, data: { error: e } });
-  }
-};
+// const createEvent = async (req, res) => {
+//   try {
+//     const { title, description } = req.body;
+//     const event = new Event({
+//       title,
+//       description,
+//     });
+//     await event
+//       .save()
+//       .then(() => {
+//         return res
+//           .status(200)
+//           .json({
+//             success: true,
+//             data: { message: "Event Created Successfully." },
+//           });
+//       })
+//       .catch((e) => {
+//         return res
+//           .status(200)
+//           .json({
+//             success: false,
+//             data: { message: "Event Not Created.", error: e },
+//           });
+//       });
+//   } catch (e) {
+//     return res.json({ success: false, data: { error: e } });
+//   }
+// };
 
 const addsliderimg = async (req, res) => {
   try {
@@ -155,4 +156,23 @@ const getUsers = async (req, res) => {
   return res.json({ success: true, data: users });
 }
 
-module.exports = { createManager, createEvent, addsliderimg, getUsers };
+const getPlaceReq = async (req, res) => {
+  try {
+    const places = await Place.find({where:{status:"pending"}});
+  return res.json({ success: true, data: places });
+  } catch (error) {
+    return res.status(200).json({ success: false, data: { error: error } });
+  }
+}
+
+const acceptPlaceReq = async (req, res) => {
+  try {
+    const {id} = req.params;
+    await Place.update({id},{status:"accepted"});
+    return res.status(200).json({ success: true, data: { message: "Request Accepted Successfully." } });
+  } catch (error) {
+    return res.status(200).json({ success: false, data: { error: error } });
+  }
+}
+
+module.exports = { createManager, addsliderimg, getUsers, getPlaceReq, acceptPlaceReq };

@@ -20,6 +20,6 @@ const placeSchema = mongoose.Schema({
 {timestamps: true}
 );
 
-const placeModel = mongoose.model("event", placeSchema);
+const PlaceModel = mongoose.model("event", placeSchema);
 
-module.exports = placeModel;
+module.exports = PlaceModel;

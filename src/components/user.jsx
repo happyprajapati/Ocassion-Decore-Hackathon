@@ -4,6 +4,7 @@ import Login from './../pages/login'
 import Register from './../pages/register'
 import Profile from './../pages/profile';
 import ResetPass from './../pages/resetPass';
+import Payment from './../pages/payment';
 
 function user() {
     return (
@@ -15,6 +16,7 @@ function user() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="login/reset-password/:token" element={<ResetPass />} />
+            <Route path="/payment" element={<Payment />} />
             {/* <Route path="rooms" element={<Rooms />} /> */}
             {/* <Route path="*" element={<NoPage />} /> */}
         </Routes>

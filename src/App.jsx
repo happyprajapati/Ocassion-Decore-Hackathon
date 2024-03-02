@@ -4,7 +4,7 @@ import User from './components/user'
 import Owner from './components/owner'
 
 function user() {
-  const [role, setRole] = React.useState(0);
+  const [role, setRole] = React.useState("");
   
   React.useEffect(()=>{
     if(localStorage.getItem("role"))
@@ -13,9 +13,9 @@ function user() {
 
   return (
     <>
-    {role === 0 && <User />}
+    {role === "buyer" && <User />}
 
-    {role === 1 && <Owner />}
+    {role === "owner" && <Owner />}
     </>
   )
 }
