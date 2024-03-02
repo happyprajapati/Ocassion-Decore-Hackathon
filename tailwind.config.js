@@ -5,7 +5,8 @@ export default withMT({
   theme: {
     extend: {
       fontFamily:{
-        "cardo": ["Cardo", "serif"]
+        "cardo": ["Cardo", "serif"],
+        "alice": ["Alice", "serif"]
       }
     },
   },
