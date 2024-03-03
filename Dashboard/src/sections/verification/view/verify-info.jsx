@@ -1,21 +1,21 @@
 import { useState } from 'react';
 
-import Stack from '@mui/material/Stack';
+// import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Unstable_Grid2';
+// import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import { products } from 'src/_mock/products';
 
-import ProductCard from '../product-card';
-import ProductSort from '../product-sort';
-import ProductFilters from '../product-filters';
-import ProductCartWidget from '../product-cart-widget';
-import { VerifyInfo } from 'src/components/tables/VerifyInfo';
+// import ProductCard from '../product-card';
+// import ProductSort from '../product-sort';
+// import ProductFilters from '../product-filters';
+// import ProductCartWidget from '../product-cart-widget';
+import { VerifyTable } from 'src/components/tables/Verifytable';
 
 // ----------------------------------------------------------------------
 
-export default function VerifyInfo() {
+export function VerifyInfo() {
   // const [openFilter, setOpenFilter] = useState(false);
 
   // const handleOpenFilter = () => {
@@ -29,9 +29,9 @@ export default function VerifyInfo() {
   return (
     <Container>
       <Typography variant="h4" sx={{ mb: 5 }}>
-        Places
+        Verification
       </Typography>
-       <VerifyInfo/>
+       <VerifyTable />
 
       {/* <Stack
         direction="row"
