@@ -149,7 +149,7 @@ export default function Header() {
             href="/"
             className="mr-4 cursor-pointer font-medium"
           >
-            <img src="/Venue-Vista/logo.svg" width={80} height={80} />
+            <img src="/Venue-Vista-Hackathon/logo.svg" width={80} height={80} />
           </Typography>
           <div className="flex items-center gap-4">
             {!isLogin && <div className="mr-4 hidden lg:block">{navList1}</div>}
