@@ -11,7 +11,7 @@ function user() {
         <>
         <BrowserRouter>
         <Routes>
-            <Route index element={<Home />} />
+            <Route index path="/Venue-Vista" element={<Home />} />
             <Route path="profile" element={<Profile />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />

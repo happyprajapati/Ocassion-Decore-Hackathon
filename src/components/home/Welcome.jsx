@@ -4,18 +4,18 @@ import Addplace from "../../pages/addplace";
 
 const images = [
   {
-    src: "/sliderimg1.jpg",
+    src: "/Venue-Vista/sliderimg1.jpg",
     header: "Venue Booking and Event Decoration  Platform",
     content: "Welcome to our Event Decoration and Venue Booking Platform!",
   },
   {
-    src: "/sliderimg2.jpg",
+    src: "/Venue-Vista/sliderimg2.jpg",
     header: "Looking to host events?",
     content:
       "our platform offers a seamless experience for both event organizers and venue owners.",
   },
   {
-    src: "/sliderimg3.jpg",
+    src: "/Venue-Vista/sliderimg3.jpg",
     header: "wide range of venues",
     content:
       "Our platform offers a wide range of venues including halls, banquet rooms, gardens, and more.",
@@ -39,7 +39,7 @@ function Welcome() {
 
   return (
     <>
-    {role == "buyer" && <Carousel autoplay className="rounded-xl">
+    {role == "buyer" || role == "" && <Carousel autoplay className="rounded-xl">
       {images.map((image, key) => (
         // <>
         <div key={key} className="relative h-full w-full">
