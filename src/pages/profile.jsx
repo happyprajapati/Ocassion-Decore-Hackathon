@@ -6,7 +6,7 @@ function profile() {
     <>
     <Header />
     <div className='mx-10 my-40'>
-      ugfyugufyugfygf
+      Happy Prajapati
     </div>
     </>
   )

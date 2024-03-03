@@ -11,17 +11,8 @@ import Typography from '@mui/material/Typography';
 // import ProductSort from '../product-sort';
 // import ProductFilters from '../product-filters';
 // import ProductCartWidget from '../product-cart-widget';
-import CardInfo from '../../../components/tables/CardInfo';
 
-
-<<<<<<< HEAD
-=======
-import ProductCard from '../product-card';
-import ProductSort from '../product-sort';
-import ProductFilters from '../product-filters';
-import ProductCartWidget from '../product-cart-widget';
 import { CardInfo } from 'src/components/tables/CardInfo';
->>>>>>> 90bdeda198ceb933c517ea0053d78f0bf568a326
 
 // ----------------------------------------------------------------------
 
