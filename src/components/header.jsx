@@ -12,8 +12,8 @@ import {
 } from "@material-tailwind/react";
 
 const menulist = [
-  { link: "/Venue-Vista/profile", name: "Profile" },
-  { link: "/Venue-Vista/logout", name: "logout" },
+  { link: "/Venue-Vista-Hackathon/profile", name: "Profile" },
+  { link: "/Venue-Vista-Hackathon/logout", name: "logout" },
 ];
 
 export default function Header() {

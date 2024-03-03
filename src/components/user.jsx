@@ -11,12 +11,12 @@ function user() {
         <>
         <BrowserRouter>
         <Routes>
-            <Route index path="/Venue-Vista" element={<Home />} />
-            <Route path="/Venue-Vista/profile" element={<Profile />} />
-            <Route path="/Venue-Vista/login" element={<Login />} />
-            <Route path="/Venue-Vista/register" element={<Register />} />
-            <Route path="/Venue-Vista/login/reset-password/:token" element={<ResetPass />} />
-            <Route path="/Venue-Vista/payment" element={<Payment />} />
+            <Route index path="/Venue-Vista-Hackathon" element={<Home />} />
+            <Route path="/Venue-Vista-Hackathon/profile" element={<Profile />} />
+            <Route path="/Venue-Vista-Hackathon/login" element={<Login />} />
+            <Route path="/Venue-Vista-Hackathon/register" element={<Register />} />
+            <Route path="/Venue-Vista-Hackathon/login/reset-password/:token" element={<ResetPass />} />
+            <Route path="/Venue-Vista-Hackathon/payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>
       </>

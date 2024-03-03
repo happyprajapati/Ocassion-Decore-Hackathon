@@ -8,28 +8,28 @@ import { Pagination } from "swiper/modules";
 
 const events = [
   {
-    src: "/Venue-Vista/swiperimg1.png",
+    src: "/Venue-Vista-Hackathon/swiperimg1.png",
     title: "Reception",
     add: "Ahmedabad, Gujarat",
     price: 100,
     capacity: 100,
   },
   {
-    src: "/Venue-Vista/swiperimg2.png",
+    src: "/Venue-Vista-Hackathon/swiperimg2.png",
     title: "Wedding",
     add: "Gandhinagar, Gujarat",
     price: 100,
     capacity: 100,
   },
   {
-    src: "/Venue-Vista/swiperimg3.png",
+    src: "/Venue-Vista-Hackathon/swiperimg3.png",
     title: "Birthday",
     add: "Vadodara, Gujarat",
     price: 100,
     capacity: 100,
   },
   {
-    src: "/Venue-Vista/swiperimg4.png",
+    src: "/Venue-Vista-Hackathon/swiperimg4.png",
     title: "Seminar",
     add: "Jamnagar, Gujarat",
     price: 100,

@@ -11,10 +11,10 @@ function owner() {
     <>
         <BrowserRouter>
         <Routes>
-            <Route index path="/Venue-Vista" element={<Home />} />
-            <Route path="/Venue-Vista/profile" element={<Profile />} />
-            <Route path="/Venue-Vista/addplace" element={<Addplace />} />
-            <Route path="/Venue-Vista/status" element={<Status />} />
+            <Route index path="/Venue-Vista-Hackathon" element={<Home />} />
+            <Route path="/Venue-Vista-Hackathon/profile" element={<Profile />} />
+            <Route path="/Venue-Vista-Hackathon/addplace" element={<Addplace />} />
+            <Route path="/Venue-Vista-Hackathon/status" element={<Status />} />
         </Routes>
       </BrowserRouter>
       </>

@@ -4,18 +4,18 @@ import SelectDialog from "./selectDialog";
 
 const images = [
   {
-    src: "/Venue-Vista/sliderimg1.jpg",
+    src: "/Venue-Vista-Hackathon/sliderimg1.jpg",
     header: "Venue Booking and Event Decoration  Platform",
     content: "Welcome to our Event Decoration and Venue Booking Platform!",
   },
   {
-    src: "/Venue-Vista/sliderimg2.jpg",
+    src: "/Venue-Vista-Hackathon/sliderimg2.jpg",
     header: "Looking to host events?",
     content:
       "our platform offers a seamless experience for both event organizers and venue owners.",
   },
   {
-    src: "/Venue-Vista/sliderimg3.jpg",
+    src: "/Venue-Vista-Hackathon/sliderimg3.jpg",
     header: "wide range of venues",
     content:
       "Our platform offers a wide range of venues including halls, banquet rooms, gardens, and more.",
