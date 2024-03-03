@@ -12,12 +12,9 @@ function owner() {
         <BrowserRouter>
         <Routes>
             <Route index element={<Home />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="addplace" element={<Addplace />} />
-            <Route path="status" element={<Status />} />
-            {/* <Route path="login/reset-password/:token" element={<ResetPass />} /> */}
-            {/* <Route path="rooms" element={<Rooms />} /> */}
-            {/* <Route path="*" element={<NoPage />} /> */}
+            <Route path="/Venue-Vista/profile" element={<Profile />} />
+            <Route path="/Venue-Vista/addplace" element={<Addplace />} />
+            <Route path="/Venue-Vista/status" element={<Status />} />
         </Routes>
       </BrowserRouter>
       </>

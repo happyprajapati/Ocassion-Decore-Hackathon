@@ -12,13 +12,11 @@ function user() {
         <BrowserRouter>
         <Routes>
             <Route index path="/Venue-Vista" element={<Home />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="login/reset-password/:token" element={<ResetPass />} />
-            <Route path="/payment" element={<Payment />} />
-            {/* <Route path="rooms" element={<Rooms />} /> */}
-            {/* <Route path="*" element={<NoPage />} /> */}
+            <Route path="/Venue-Vista/profile" element={<Profile />} />
+            <Route path="/Venue-Vista/login" element={<Login />} />
+            <Route path="/Venue-Vista/register" element={<Register />} />
+            <Route path="/Venue-Vista/login/reset-password/:token" element={<ResetPass />} />
+            <Route path="/Venue-Vista/payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>
       </>

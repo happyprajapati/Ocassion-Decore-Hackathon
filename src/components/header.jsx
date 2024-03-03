@@ -12,11 +12,12 @@ import {
 } from "@material-tailwind/react";
 
 const menulist = [
-  { link: "/profile", name: "Profile" },
-  { link: "/logout", name: "logout" },
+  { link: "/Venue-Vista/profile", name: "Profile" },
+  { link: "/Venue-Vista/logout", name: "logout" },
 ];
 
 export default function Header() {
+  const [role, setRole] = React.useState("");
   const [openNav, setOpenNav] = React.useState(false);
   const [scroll, setScroll] = React.useState(false);
   const [isLogin, setIsLogin] = React.useState(false);
@@ -32,7 +33,10 @@ export default function Header() {
   };
 
   React.useEffect(() => {
-    if (localStorage.getItem("role")) setIsLogin(true);
+    if (localStorage.getItem("role")){
+      setRole(localStorage.getItem("role"))
+      setIsLogin(true);
+    } 
     else setIsLogin(false);
 
     window.addEventListener(
@@ -114,6 +118,24 @@ export default function Header() {
     </ul>
   );
 
+  const navList3 = (
+    <ul className="w-fit mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 mx-auto">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a
+          href="addplace"
+          className="flex justify-center items-center px-3 py-1 bg-[#a855f7] text-white rounded-md hover:shadow-xl"
+        >
+          Venue
+        </a>
+      </Typography>
+    </ul>
+  );
+
   return (
     <div className="max-h-[768px] max-w-full">
       <Navbar
@@ -131,8 +153,52 @@ export default function Header() {
           </Typography>
           <div className="flex items-center gap-4">
             {!isLogin && <div className="mr-4 hidden lg:block">{navList1}</div>}
-            {isLogin && <div className="mr-4 hidden lg:block">{navList2}</div>}
-            {isLogin && (
+            {isLogin && role == "owner" && <div className="mr-4 hidden lg:block">{navList2}</div>}
+            {isLogin && role == "owner" && (
+              <Menu
+                open={isMenuOpen}
+                handler={setIsMenuOpen}
+                offset={{ mainAxis: 20 }}
+                placement="bottom"
+                allowHover={false}
+              >
+                <MenuHandler>
+                  <Typography as="div" variant="small" className="font-medium">
+                    <ListItem
+                      className="flex items-center gap-2 py-2 pr-4 font-medium bg-transparent hover:bg-tarnsparent"
+                      selected={isMenuOpen || isMobileMenuOpen}
+                      onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+                    >
+                      <img
+                        src="/Profile.jpg"
+                        className=" w-7 h-7 rounded-full"
+                      />
+                      {isMobileMenuOpen ? <div>↓</div> : <div>↑</div>}
+                    </ListItem>
+                  </Typography>
+                </MenuHandler>
+                <MenuList
+                  className="hidden
+         max-w-screen-xl rounded-xl lg:block"
+                >
+                  <ul className="flex flex-col items-center lg:hover:border-none md:hover:border-none sm:hover:border-none">
+                    {menulist.map((item) => (
+                      // eslint-disable-next-line react/jsx-key
+                      <li>
+                        <a
+                          href={item.link}
+                          className="flex items-center gap-2 py-2 font-medium"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </MenuList>
+              </Menu>
+            )}
+             {isLogin && role == "buyer" && <div className="mr-4 hidden lg:block">{navList3}</div>}
+            {isLogin && role == "buyer" && (
               <Menu
                 open={isMenuOpen}
                 handler={setIsMenuOpen}
@@ -215,7 +281,8 @@ export default function Header() {
           </div>
         </div>
         {!isLogin && <MobileNav open={openNav}>{navList1}</MobileNav>}
-        {isLogin && <MobileNav open={openNav}>{navList2}</MobileNav>}
+        {isLogin && role=="owner" && <MobileNav open={openNav}>{navList2}</MobileNav>}
+        {isLogin && role=="buyer" && <MobileNav open={openNav}>{navList3}</MobileNav>}
       </Navbar>
     </div>
   );

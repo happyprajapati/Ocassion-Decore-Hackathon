@@ -55,7 +55,7 @@ const handleSubmit = (e) => {
     <div className="h-screen">
       <div className="h-screen flex flex-col justify-center items-center">
         <p className="mb-5 text-3xl md:text-4xl lg:text-5xl font-cardo">
-          Sigh Up
+          Sign Up
         </p>
         <form className="w-full md:w-[80%] lg:w-[50%]">
           <input
