@@ -17,7 +17,7 @@ function login() {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        fetch("http://192.168.222.100:1111/login", {
+        fetch("http://192.168.0.107:1111/login", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -34,7 +34,7 @@ function login() {
             setMsg([res.data.message]);
             setIsErr(false)
             setTimeout(() => {
-                navigate('/')
+                navigate('/Venue-Vista-Hackathone/')
               }, 1500);
           } else {
             setMsg([res.data.message]);

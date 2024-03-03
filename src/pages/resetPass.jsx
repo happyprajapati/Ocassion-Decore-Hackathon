@@ -17,7 +17,7 @@ function resetPass() {
 
     useEffect(() => {
         console.log(token);
-        fetch(`http://192.168.222.100:1111/reset-password/${token}`, {
+        fetch(`http://192.168.0.107:1111/reset-password/${token}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

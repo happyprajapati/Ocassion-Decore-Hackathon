@@ -170,7 +170,7 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                     >
                       <img
-                        src="/Venue-Vista/Profile.jpg"
+                        src="/Venue-Vista-Hackathon/Profile.jpg"
                         className=" w-7 h-7 rounded-full"
                       />
                       {isMobileMenuOpen ? <div>↓</div> : <div>↑</div>}
@@ -214,7 +214,7 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                     >
                       <img
-                        src="/Venue-Vista/Profile.jpg"
+                        src="/Venue-Vista-Hackathon/Profile.jpg"
                         className=" w-7 h-7 rounded-full"
                       />
                       {isMobileMenuOpen ? <div>↓</div> : <div>↑</div>}

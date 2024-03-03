@@ -22,7 +22,7 @@ const handleSubmit = (e) => {
         setIsErr(true);
         return;
       }
-      fetch("http://192.168.222.100:1111/register", {
+      fetch("http://192.168.0.107:1111/register", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -37,7 +37,7 @@ const handleSubmit = (e) => {
             setMsg(res.data.message);
             setIsErr(false);
             setTimeout(() => {
-              navigate('/login')
+              navigate('/Venue-Vista-Hackathone/login')
             }, 1500);
           } else {
             setMsg(res.data.error);
