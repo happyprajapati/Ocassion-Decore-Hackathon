@@ -127,7 +127,7 @@ export default function Header() {
         className="p-1 font-normal"
       >
         <a
-          href="addplace"
+          href="venue"
           className="flex justify-center items-center px-3 py-1 bg-[#a855f7] text-white rounded-md hover:shadow-xl"
         >
           Venue
@@ -153,8 +153,8 @@ export default function Header() {
           </Typography>
           <div className="flex items-center gap-4">
             {!isLogin && <div className="mr-4 hidden lg:block">{navList1}</div>}
-            {isLogin && role == "owner" && <div className="mr-4 hidden lg:block">{navList2}</div>}
-            {isLogin && role == "owner" && (
+            {isLogin && role === "owner" && <div className="mr-4 hidden lg:block">{navList2}</div>}
+            {isLogin && role === "owner" && (
               <Menu
                 open={isMenuOpen}
                 handler={setIsMenuOpen}
@@ -170,7 +170,7 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                     >
                       <img
-                        src="/Profile.jpg"
+                        src="/Venue-Vista/Profile.jpg"
                         className=" w-7 h-7 rounded-full"
                       />
                       {isMobileMenuOpen ? <div>↓</div> : <div>↑</div>}
@@ -197,8 +197,8 @@ export default function Header() {
                 </MenuList>
               </Menu>
             )}
-             {isLogin && role == "buyer" && <div className="mr-4 hidden lg:block">{navList3}</div>}
-            {isLogin && role == "buyer" && (
+             {isLogin && role === "buyer" && <div className="mr-4 hidden lg:block">{navList3}</div>}
+            {isLogin && role === "buyer" && (
               <Menu
                 open={isMenuOpen}
                 handler={setIsMenuOpen}
@@ -214,7 +214,7 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                     >
                       <img
-                        src="/Profile.jpg"
+                        src="/Venue-Vista/Profile.jpg"
                         className=" w-7 h-7 rounded-full"
                       />
                       {isMobileMenuOpen ? <div>↓</div> : <div>↑</div>}
@@ -281,8 +281,8 @@ export default function Header() {
           </div>
         </div>
         {!isLogin && <MobileNav open={openNav}>{navList1}</MobileNav>}
-        {isLogin && role=="owner" && <MobileNav open={openNav}>{navList2}</MobileNav>}
-        {isLogin && role=="buyer" && <MobileNav open={openNav}>{navList3}</MobileNav>}
+        {isLogin && role==="owner" && <MobileNav open={openNav}>{navList2}</MobileNav>}
+        {isLogin && role==="buyer" && <MobileNav open={openNav}>{navList3}</MobileNav>}
       </Navbar>
     </div>
   );

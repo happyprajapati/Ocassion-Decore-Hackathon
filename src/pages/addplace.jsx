@@ -2,7 +2,7 @@
 
 // export default function addplace() {
 //     return (
-//         <div className='mx-10 my-40'>
+//         <div classNameName='mx-10 my-40'>
 
 //         </div>
 //     )
@@ -10,6 +10,7 @@
 
 import { State, City }  from 'country-state-city';
 import React, { useEffect, useState } from 'react';
+import Header from '../components/header';
 // import './App.css'; // assuming you have a CSS file for styling
 
 const addplace = () => {
@@ -52,74 +53,74 @@ useEffect(()=>{
 
     return (
         <>
-            
-            <form class="max-w-sm mx-auto mx-10 my-40">
-            <h1 className='pb-5 text-4xl font-extrabold'>Add Place</h1>
-                <div class="mb-5">
-                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                    <input type="text" onChange={handleChange} id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter your Name" required />
+            <Header />
+            <form className="max-w-sm mx-auto mx-10 my-24">
+            <h1 className='pb-5 text-4xl font-extrabold flex justify-center'>Add Place</h1>
+                <div className="mb-5">
+                    <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                    <input type="text" onChange={handleChange} id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter your Name" required />
                 </div>
-                <div class="mb-5">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
-                    <select id="countries" name='state' value={formData.state}  onChange={handleChange} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <div className="mb-5">
+                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
+                    <select id="countries" name='state' value={formData.state}  onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option>Select State</option>
                         {state.map((state,key) => (
                             <option key={key} value={state.isoCode}>{state.name}</option>
                         ))}
                     </select>
                 </div>
-                <div class="mb-5">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
-                    <select id="cities" name='city' value={formData.city}  onChange={handleChange} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <div className="mb-5">
+                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
+                    <select id="cities" name='city' value={formData.city}  onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option>Select City</option>
                         {city.map((city,key) => (
                             <option key={key} value={city.name}>{city.name}</option>
                         ))}
                     </select>
                 </div>
-                <div class="mb-5">
-                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
-                    <input type="text"  onChange={handleChange} id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Location" required />
+                <div className="mb-5">
+                    <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
+                    <input type="text"  onChange={handleChange} id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Location" required />
                 </div>
 
-                <div class="mb-5">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Capacity</label>
-                    <input type="email"  onChange={handleChange} id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="No. of people" required />
+                <div className="mb-5">
+                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Capacity</label>
+                    <input type="email"  onChange={handleChange} id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="No. of people" required />
                 </div>
 
-                <div class="mb-5">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Decoration</label>
+                <div className="mb-5">
+                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Decoration</label>
 
-                    <div class="flex items-center mb-4">
-                        <input id="default-radio-1"  onChange={handleChange} type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                        <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yes</label>
-                        <input checked id="default-radio-2"  onChange={handleChange} type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-2" />
-                        <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No</label>
+                    <div className="flex items-center mb-4">
+                        <input id="default-radio-1"  onChange={handleChange} type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                        <label for="default-radio-1" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yes</label>
+                        <input checked id="default-radio-2"  onChange={handleChange} type="radio" value="" name="default-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-2" />
+                        <label for="default-radio-2" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No</label>
                     </div>
                 </div>
 
-                <div className='pb-5'>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Adhaar Card</label>
-                    <input  onChange={handleChange} class="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
+                <div classNameName='pb-5'>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Adhaar Card</label>
+                    <input  onChange={handleChange} className="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
                 </div>
 
-                <div className='pb-5'>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Property</label>
-                    <input  onChange={handleChange} class="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
+                <div classNameName='pb-5'>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Property</label>
+                    <input  onChange={handleChange} className="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
                 </div>
-                <div className='pb-5'>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Bank</label>
-                    <input  onChange={handleChange} class="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
+                <div classNameName='pb-5'>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Bank</label>
+                    <input  onChange={handleChange} className="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 p-2 rounded dark:text-gray-400 dark:placeholder-gray-400" id="file_input" type="file" />
                     </div>
 
 
-                <div class="flex items-start mb-5">
-                    <div class="flex items-center h-5">
-                        {/* <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required /> */}
+                <div className="flex items-start mb-5">
+                    <div className="flex items-center h-5">
+                        {/* <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required /> */}
                     </div>
-                    {/* <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label> */}
+                    {/* <label for="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label> */}
                 </div>
-                <button onClick={handleSubmit} type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Place</button>
+                <button onClick={handleSubmit} type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Place</button>
             </form>
 
         </>

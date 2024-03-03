@@ -11,7 +11,7 @@ function owner() {
     <>
         <BrowserRouter>
         <Routes>
-            <Route index element={<Home />} />
+            <Route index path="/Venue-Vista" element={<Home />} />
             <Route path="/Venue-Vista/profile" element={<Profile />} />
             <Route path="/Venue-Vista/addplace" element={<Addplace />} />
             <Route path="/Venue-Vista/status" element={<Status />} />
